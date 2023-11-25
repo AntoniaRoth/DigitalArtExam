@@ -23,7 +23,7 @@ def add_corners(im, rad):
 
 im = Image.open('image.png')
 im = add_corners(im, 100)
-im.save('formula1-rounded-logo.png')
+im.save('formula1-logo.png')
 
 
 qr = qrcode.QRCode(error_correction=qrcode.constants.ERROR_CORRECT_H)
