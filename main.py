@@ -6,7 +6,7 @@ from qrcode.image.styles.colormasks import SolidFillColorMask
 
 if not hasattr(PIL.Image, 'Resampling'):
   PIL.Image.Resampling = PIL.Image
-# Now PIL.Image.Resampling.BICUBIC is always recognized.
+
 
 def add_corners(im, rad):
     circle = Image.new('L', (rad * 2, rad * 2), 0)
@@ -20,6 +20,7 @@ def add_corners(im, rad):
     alpha.paste(circle.crop((rad, rad, rad * 2, rad * 2)), (w - rad, h - rad))
     im.putalpha(alpha)
     return im
+
 
 im = Image.open('image.png')
 im = add_corners(im, 100)
